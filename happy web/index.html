@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Sister Evangeline</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Birthday Bliss</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <h1>Happy Birthday Sister Evangeline!</h1>
+            <p>Celebrating a wonderful soul who brings joy and love to all around her!</p>
+            <a href="#contact" class="btn">Send Wishes</a>
+        </section>
+
+        <section id="about" class="about">
+            <h2>About Sister Evangeline</h2>
+            <p>Sister Evangeline is an incredible individual, loved for her kindness, humor, and unwavering support for those around her. Today, we celebrate her achievements, dreams, and the joy she brings into our lives.</p>
+        </section>
+
+        <section id="gallery" class="gallery">
+            <h2>Photo Gallery</h2>
+            <div class="photo-grid">
+                <img src="photo1.jpg" alt="Evangeline's Photo 1">
+                <img src="photo2.jpg" alt="Evangeline's Photo 2">
+                <img src="photo3.jpg" alt="Evangeline's Photo 3">
+                <img src="photo4.jpg" alt="Evangeline's Photo 4">
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Send Your Wishes</h2>
+            <form id="wish-form">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="4" placeholder="Write your birthday wishes here..." required></textarea>
+                
+                <button type="submit" class="btn">Send</button>
+            </form>
+
+            <div id="wishes-list">
+                <h3>Messages Received:</h3>
+                <ul></ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Birthday Bliss. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

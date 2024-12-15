@@ -1,0 +1,277 @@
+/* General Reset */
+body, h1, h2, p, ul, li, input, textarea {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #ffebcd; /* Blanched Almond */
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff4500; /* Orange Red */
+    color: white;
+    padding: 1rem 2rem;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header nav ul {
+    display: flex;
+    gap: 1.5rem;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ffd700; /* Gold */
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: linear-gradient(to right, #ff4500, #ff1493); /* Gradient */
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    animation: slideIn 3s ease-in-out forwards;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    animation: fadeIn 4s ease-in-out forwards;
+}
+
+.hero .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 2rem;
+    background-color: #ffd700; /* Gold */
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    animation: bounce 2s infinite;
+}
+
+.hero .btn:hover {
+    background-color: #ff4500; /* Orange Red */
+    color: white;
+}
+
+/* Animations */
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* About Section */
+.about {
+    padding: 2rem;
+    text-align: center;
+    background-color: #fefefe; /* White */
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+.about h2 {
+    color: #ff4500;
+    margin-bottom: 1rem;
+    animation: slideIn 2s ease-in-out;
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 2rem;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.gallery h2 {
+    color: #ff4500;
+    margin-bottom: 1rem;
+    animation: slideIn 3s ease-in-out;
+}
+
+.photo-grid {
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: center; /* Center the images horizontally */
+    gap: 1rem; /* Space between the images */
+}
+
+.photo-grid img {
+    max-width: 25%; /* Set images to 25% of their original size (half of half) */
+    height: auto; /* Maintain the aspect ratio */
+    object-fit: contain; /* Ensures the aspect ratio is preserved */
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.photo-grid img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Balloons Background */
+.balloons {
+    position: fixed; /* Ensure the balloons are positioned on top of the background */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allow clicks through balloons */
+    overflow: hidden;
+    z-index: 1; /* Ensure balloons appear above other content */
+}
+
+.balloon {
+    position: absolute;
+    bottom: -150px; /* Start balloons off-screen */
+    width: 50px;
+    height: 70px;
+    background-color: #ff69b4; /* Hot Pink */
+    border-radius: 50%;
+    box-shadow: inset -5px -10px rgba(0, 0, 0, 0.1);
+    animation: floatUp 8s linear infinite;
+}
+
+/* Balloon Animation */
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-110vh) scale(1.2);
+        opacity: 0;
+    }
+}
+
+/* Randomize Balloon Positions */
+.balloon:nth-child(1) {
+    left: 10%;
+    background-color: #ff4500; /* Orange Red */
+    animation-duration: 6s;
+}
+
+.balloon:nth-child(2) {
+    left: 30%;
+    background-color: #ffd700; /* Gold */
+    animation-duration: 7s;
+}
+
+.balloon:nth-child(3) {
+    left: 50%;
+    background-color: #32cd32; /* Lime Green */
+    animation-duration: 9s;
+}
+
+.balloon:nth-child(4) {
+    left: 70%;
+    background-color: #1e90ff; /* Dodger Blue */
+    animation-duration: 8s;
+}
+
+.balloon:nth-child(5) {
+    left: 90%;
+    background-color: #ff69b4; /* Hot Pink */
+    animation-duration: 10s;
+}
+
+
+/* Contact Section */
+.contact {
+    padding: 2rem;
+    background-color: #fefefe;
+    text-align: center;
+}
+
+.contact form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact form label {
+    font-weight: bold;
+    color: #333;
+}
+
+.contact form input, .contact form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact form .btn {
+    padding: 0.8rem;
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact form .btn:hover {
+    background-color: #ffd700;
+}
+
+/* Wishes List */
+#wishes-list ul {
+    margin-top: 1rem;
+    list-style: disc;
+    padding-left: 2rem;
+    color: #333;
+}
